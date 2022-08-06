@@ -1,0 +1,1944 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>ben2022</title>
+<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+		background-color: #1d1f20;
+		color-scheme: dark;
+	}
+	.pkmn-row {
+		background-color: #42484a;
+		padding: 1rem;
+		margin: 1rem;
+		display: flex;
+		align-items: center;
+	}
+	.toolbox {
+		border-top: 4px solid #1d1f20;
+		background-color: #42484a;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		white-space: nowrap;
+		overflow-x: scroll;
+		overflow-y:  none;
+		padding: 1rem;
+		height: 160px;
+	}
+	.pokemon-wrapper {
+		margin-bottom: 160px;
+	}
+	.pkmn-image {
+		display: inline-flex;
+		flex-direction: column;
+	}
+	.draggable {
+		display: inline-flex;
+		flex-direction: column;
+		width: 110px;
+		color: white;
+		background: rgba(10, 10, 10, 0.5);
+		text-align: center;
+	}
+	.operator {
+		text-align: center;
+		font-weight:  bolder;
+		font-size:  32px;
+	}
+</style>
+</head>
+<body>
+<div class="pokemon-wrapper">
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_037.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_029.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_010.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_023.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_032.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_009.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_018.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_026.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_035.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_017.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_027.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_011.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_033.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_016.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_021.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_013.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_030.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_008.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_020.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_028.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_022.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_024.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_031.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_036.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_003.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_012.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_034.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_006.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_002.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_007.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_015.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_019.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_004.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_025.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_005.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_038.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">+</div>
+<div class="pkmn-row sortable ui-sortable">
+			<div class="pkmn-image ui-sortable-handle">
+				<img src="ben2022_files/portrait_014.png" width="200" height="200">
+				<input type="number">
+			</div>
+</div>
+<div class="operator">-</div>
+</div>
+
+<div class="toolbox sortable ui-sortable">
+	
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_009.png" alt="Flame Charge">
+		<span>Flame Charge</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_014.png" alt="Astonish">
+		<span>Astonish</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_035.png" alt="Cotton Cloud Crash">
+		<span>Cotton Cloud Crash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_034.png" alt="Shadow Ball">
+		<span>Shadow Ball</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_034.png" alt="Trick">
+		<span>Trick</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_032.png" alt="Surf">
+		<span>Surf</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_030.png" alt="High Horsepower">
+		<span>High Horsepower</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_027.png" alt="Bone Rush">
+		<span>Bone Rush</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_003.png" alt="Ember">
+		<span>Ember</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_017.png" alt="Icicle Spear">
+		<span>Icicle Spear</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_038.png" alt="Leech Life">
+		<span>Leech Life</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_002.png" alt="Dream Eater">
+		<span>Dream Eater</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_034.png" alt="Dragon Tail">
+		<span>Dragon Tail</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_028.png" alt="Mystical Fire">
+		<span>Mystical Fire</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_028.png" alt="Confusion">
+		<span>Confusion</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_029.png" alt="Petal Dance">
+		<span>Petal Dance</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_007.png" alt="Tackle">
+		<span>Tackle</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_022.png" alt="Shell Smash">
+		<span>Shell Smash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_011.png" alt="Electro Ball">
+		<span>Electro Ball</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_013.png" alt="Swift">
+		<span>Swift</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_024.png" alt="Ice Shard">
+		<span>Ice Shard</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_016.png" alt="Pyro Ball">
+		<span>Pyro Ball</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_013.png" alt="Pursuit">
+		<span>Pursuit</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_013.png" alt="Rollout">
+		<span>Rollout</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_023.png" alt="Fly">
+		<span>Fly</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_008.png" alt="Avalanche">
+		<span>Avalanche</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_005.png" alt="Fire Punch">
+		<span>Fire Punch</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_033.png" alt="Livid Outrage">
+		<span>Livid Outrage</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_009.png" alt="Shadow Ball">
+		<span>Shadow Ball</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_010.png" alt="Solar Beam">
+		<span>Solar Beam</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_002.png" alt="Fire Blast">
+		<span>Fire Blast</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_015.png" alt="Pound">
+		<span>Pound</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_014.png" alt="Lunge">
+		<span>Lunge</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_005.png" alt="Cotton Guard">
+		<span>Cotton Guard</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_004.png" alt="Super Power">
+		<span>Super Power</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_026.png" alt="Water Gun">
+		<span>Water Gun</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_005.png" alt="Hydro Typhoon">
+		<span>Hydro Typhoon</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_018.png" alt="Pound">
+		<span>Pound</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_002.png" alt="Electro Web">
+		<span>Electro Web</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_025.png" alt="Wide Guard">
+		<span>Wide Guard</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_012.png" alt="Blazing Bicycle Kick">
+		<span>Blazing Bicycle Kick</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_031.png" alt="Showtime">
+		<span>Showtime</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_038.png" alt="Cross Chop">
+		<span>Cross Chop</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_008.png" alt="Snow Globe">
+		<span>Snow Globe</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_031.png" alt="Aqua Tail">
+		<span>Aqua Tail</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_035.png" alt="Leafage">
+		<span>Leafage</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_008.png" alt="Rock Slide">
+		<span>Rock Slide</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_021.png" alt="Aura Cannon">
+		<span>Aura Cannon</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_037.png" alt="Fire Spin">
+		<span>Fire Spin</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_036.png" alt="Freeze Dry">
+		<span>Freeze Dry</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_004.png" alt="Block">
+		<span>Block</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_024.png" alt="Close Combat">
+		<span>Close Combat</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_007.png" alt="Substitute">
+		<span>Substitute</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_006.png" alt="Sing">
+		<span>Sing</span>
+		<span>0</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_009.png" alt="Hex">
+		<span>Hex</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_031.png" alt="Pollen Puff">
+		<span>Pollen Puff</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_011.png" alt="Power-Up Punch">
+		<span>Power-Up Punch</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_004.png" alt="Leaf Tornado">
+		<span>Leaf Tornado</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_010.png" alt="Peck">
+		<span>Peck</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_022.png" alt="Belly Bash">
+		<span>Belly Bash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_030.png" alt="Feint">
+		<span>Feint</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1.png" alt="Pain Split">
+		<span>Pain Split</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_011.png" alt="Thunderbolt">
+		<span>Thunderbolt</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_003.png" alt="Fell Stinger">
+		<span>Fell Stinger</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_008.png" alt="X-Scissor">
+		<span>X-Scissor</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_028.png" alt="Ice Shard">
+		<span>Ice Shard</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_005.png" alt="Agility">
+		<span>Agility</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_018.png" alt="Stored Power">
+		<span>Stored Power</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_012.png" alt="Tackle">
+		<span>Tackle</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_032.png" alt="Coup de Grace">
+		<span>Coup de Grace</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_015.png" alt="Submission">
+		<span>Submission</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_022.png" alt="Triple Axel">
+		<span>Triple Axel</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_022.png" alt="Rest">
+		<span>Rest</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_020.png" alt="Teleport">
+		<span>Teleport</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_004.png" alt="Tackle">
+		<span>Tackle</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_017.png" alt="Surf">
+		<span>Surf</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_005.png" alt="Safeguard">
+		<span>Safeguard</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_029.png" alt="Water Shuriken">
+		<span>Water Shuriken</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_019.png" alt="Close Combat">
+		<span>Close Combat</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_028.png" alt="Powder Snow">
+		<span>Powder Snow</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_019.png" alt="Iron Defense">
+		<span>Iron Defense</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_008.png" alt="Aerial Ace">
+		<span>Aerial Ace</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_026.png" alt="Flash Cannon">
+		<span>Flash Cannon</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_036.png" alt="Icicle Crash">
+		<span>Icicle Crash</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_008.png" alt="Defense Curl">
+		<span>Defense Curl</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_033.png" alt="Trop Kick">
+		<span>Trop Kick</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_018.png" alt="Earthquake">
+		<span>Earthquake</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_023.png" alt="Surf">
+		<span>Surf</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_033.png" alt="Confusion">
+		<span>Confusion</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_037.png" alt="Hyper Voice">
+		<span>Hyper Voice</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_014.png" alt="Ember">
+		<span>Ember</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_016.png" alt="Ultra Swole Slam">
+		<span>Ultra Swole Slam</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_038.png" alt="Draco Impact">
+		<span>Draco Impact</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_007.png" alt="Air Slash">
+		<span>Air Slash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_038.png" alt="Dig">
+		<span>Dig</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_031.png" alt="Dazzling Gleam">
+		<span>Dazzling Gleam</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_018.png" alt="Queen Ascendant">
+		<span>Queen Ascendant</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_027.png" alt="Nock Nock">
+		<span>Nock Nock</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_002.png" alt="Bliss Assistance">
+		<span>Bliss Assistance</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_004.png" alt="Quick Attack">
+		<span>Quick Attack</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_018.png" alt="Slack Off">
+		<span>Slack Off</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_013.png" alt="Slash">
+		<span>Slash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_017.png" alt="Phantom Ambush">
+		<span>Phantom Ambush</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_024.png" alt="Whirlpool">
+		<span>Whirlpool</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_025.png" alt="Branch Poke">
+		<span>Branch Poke</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_013.png" alt="Brave Bird">
+		<span>Brave Bird</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_030.png" alt="Feint">
+		<span>Feint</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_009.png" alt="Will-o-Wisp">
+		<span>Will-o-Wisp</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_014.png" alt="Dynamic Punch">
+		<span>Dynamic Punch</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_002.png" alt="Spark">
+		<span>Spark</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_028.png" alt="Shadow Sneak">
+		<span>Shadow Sneak</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_031.png" alt="Hurricane">
+		<span>Hurricane</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_037.png" alt="Fairy Singularity">
+		<span>Fairy Singularity</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_023.png" alt="Razor Leaf">
+		<span>Razor Leaf</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_004.png" alt="Psyshock">
+		<span>Psyshock</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_025.png" alt="Dragon Pulse">
+		<span>Dragon Pulse</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_012.png" alt="Water Spout">
+		<span>Water Spout</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_019.png" alt="Outrage">
+		<span>Outrage</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_003.png" alt="Dazzling Gleam">
+		<span>Dazzling Gleam</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_006.png" alt="Tail Whip">
+		<span>Tail Whip</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_019.png" alt="Rubble Rouser">
+		<span>Rubble Rouser</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_009.png" alt="Mystical Fire">
+		<span>Mystical Fire</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_024.png" alt="Meteor Mash">
+		<span>Meteor Mash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_016.png" alt="Flare Blitz">
+		<span>Flare Blitz</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_030.png" alt="Waterburst Shuriken">
+		<span>Waterburst Shuriken</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_034.png" alt="Karate Chop">
+		<span>Karate Chop</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_029.png" alt="Astonish">
+		<span>Astonish</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_017.png" alt="Volt Tackle">
+		<span>Volt Tackle</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_025.png" alt="Flame Charge">
+		<span>Flame Charge</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_033.png" alt="Dragon Breath">
+		<span>Dragon Breath</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_018.png" alt="Yawn">
+		<span>Yawn</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_035.png" alt="Metal Claw">
+		<span>Metal Claw</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_012.png" alt="Psycho Cut">
+		<span>Psycho Cut</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_030.png" alt="Extreme Speed">
+		<span>Extreme Speed</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_028.png" alt="Starlight Recital">
+		<span>Starlight Recital</span>
+		<span>8</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_021.png" alt="Barrier">
+		<span>Barrier</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_012.png" alt="Defense Curl">
+		<span>Defense Curl</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_021.png" alt="Fury Cutter">
+		<span>Fury Cutter</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_024.png" alt="Helping Hand">
+		<span>Helping Hand</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_020.png" alt="Psychic">
+		<span>Psychic</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_025.png" alt="Dragon Claw">
+		<span>Dragon Claw</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_007.png" alt="Fairy Frolic">
+		<span>Fairy Frolic</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_034.png" alt="Extreme Speed">
+		<span>Extreme Speed</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_022.png" alt="Fake Out">
+		<span>Fake Out</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_028.png" alt="Confusion">
+		<span>Confusion</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_015.png" alt="Baby Doll Eyes">
+		<span>Baby Doll Eyes</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_027.png" alt="Wild Charge">
+		<span>Wild Charge</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_010.png" alt="Flamethrower">
+		<span>Flamethrower</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_010.png" alt="Feather Dance">
+		<span>Feather Dance</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_023.png" alt="Barrage Blow">
+		<span>Barrage Blow</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_006.png" alt="Flame Sweep">
+		<span>Flame Sweep</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_021.png" alt="Heavy Slam">
+		<span>Heavy Slam</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_010.png" alt="Curse">
+		<span>Curse</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_004.png" alt="Glacial Stage">
+		<span>Glacial Stage</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_029.png" alt="Bubble">
+		<span>Bubble</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_005.png" alt="Double Slap">
+		<span>Double Slap</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_015.png" alt="Soft Boiled">
+		<span>Soft Boiled</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_036.png" alt="Leafage">
+		<span>Leafage</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_032.png" alt="Tackle">
+		<span>Tackle</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0.png" alt="Draining Kiss">
+		<span>Draining Kiss</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_013.png" alt="Sludge Bomb">
+		<span>Sludge Bomb</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_003.png" alt="Sacred Sword">
+		<span>Sacred Sword</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_026.png" alt="Blaze Kick">
+		<span>Blaze Kick</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_035.png" alt="Volt Switch">
+		<span>Volt Switch</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_015.png" alt="Thunder">
+		<span>Thunder</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_007.png" alt="Giga Drain">
+		<span>Giga Drain</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_037.png" alt="Lick">
+		<span>Lick</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_017.png" alt="Laser Focus">
+		<span>Laser Focus</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_037.png" alt="Will-o-Wisp">
+		<span>Will-o-Wisp</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_036.png" alt="Belch">
+		<span>Belch</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_020.png" alt="Psychic Solaire">
+		<span>Psychic Solaire</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_006.png" alt="Flail">
+		<span>Flail</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_022.png" alt="Surf">
+		<span>Surf</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_017.png" alt="Synthesis">
+		<span>Synthesis</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move.png" alt="Verdant Anger">
+		<span>Verdant Anger</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1.png" alt="Flame Burst">
+		<span>Flame Burst</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_038.png" alt="Twister">
+		<span>Twister</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_020.png" alt="Smokescreen">
+		<span>Smokescreen</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_036.png" alt="Icy Wind">
+		<span>Icy Wind</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_035.png" alt="Horn Leech">
+		<span>Horn Leech</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_011.png" alt="Light Screen">
+		<span>Light Screen</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_030.png" alt="Rapid Spin">
+		<span>Rapid Spin</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_010.png" alt="Fanciful Fireworks">
+		<span>Fanciful Fireworks</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_026.png" alt="Power Nap">
+		<span>Power Nap</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_032.png" alt="Double Team">
+		<span>Double Team</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_037.png" alt="Scald">
+		<span>Scald</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_034.png" alt="Revolving Ruin">
+		<span>Revolving Ruin</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_006.png" alt="Will-o-Wisp">
+		<span>Will-o-Wisp</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_019.png" alt="Dragon Rush">
+		<span>Dragon Rush</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_012.png" alt="Grassy Glide">
+		<span>Grassy Glide</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_020.png" alt="Thunder Shock">
+		<span>Thunder Shock</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_006.png" alt="Stuff Cheeks">
+		<span>Stuff Cheeks</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_016.png" alt="Skull Bash">
+		<span>Skull Bash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_008.png" alt="Psybeam">
+		<span>Psybeam</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_029.png" alt="Fire Blast">
+		<span>Fire Blast</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_015.png" alt="Gatling Gulp Missile">
+		<span>Gatling Gulp Missile</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_030.png" alt="Ice Fang">
+		<span>Ice Fang</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_016.png" alt="Psyshock">
+		<span>Psyshock</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_037.png" alt="Cotton Spore">
+		<span>Cotton Spore</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_020.png" alt="Razor Leaf">
+		<span>Razor Leaf</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_011.png" alt="Stealth Rock">
+		<span>Stealth Rock</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_011.png" alt="Phantom Forest">
+		<span>Phantom Forest</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_017.png" alt="Aurora Veil">
+		<span>Aurora Veil</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_003.png" alt="Sucker Punch">
+		<span>Sucker Punch</span>
+		<span>20</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_002.png" alt="Earthquake">
+		<span>Earthquake</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_014.png" alt="Telekinesis">
+		<span>Telekinesis</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_032.png" alt="Bullet Seed">
+		<span>Bullet Seed</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_006.png" alt="Egg Bomb">
+		<span>Egg Bomb</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_019.png" alt="Water Gun">
+		<span>Water Gun</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_024.png" alt="Thunderstorm">
+		<span>Thunderstorm</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_038.png" alt="Flame Charge">
+		<span>Flame Charge</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_026.png" alt="Hyperspace Hole">
+		<span>Hyperspace Hole</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_007.png" alt="Hyper Beam">
+		<span>Hyper Beam</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_012.png" alt="Psychic">
+		<span>Psychic</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_011.png" alt="Sand Attack">
+		<span>Sand Attack</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_033.png" alt="Guard Swap">
+		<span>Guard Swap</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_003.png" alt="Leaf Storm">
+		<span>Leaf Storm</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_036.png" alt="Discharge">
+		<span>Discharge</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_020.png" alt="Amnesia">
+		<span>Amnesia</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_036.png" alt="Berry Belly Flop">
+		<span>Berry Belly Flop</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_031.png" alt="Low Sweep">
+		<span>Low Sweep</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_009.png" alt="Bubble">
+		<span>Bubble</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_035.png" alt="Rapid Spin">
+		<span>Rapid Spin</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_025.png" alt="Seed Bomb">
+		<span>Seed Bomb</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_033.png" alt="Hydro Pump">
+		<span>Hydro Pump</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_027.png" alt="Sludge Bomb">
+		<span>Sludge Bomb</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_005.png" alt="Slash">
+		<span>Slash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_021.png" alt="Icy Wind">
+		<span>Icy Wind</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_024.png" alt="Wood Hammer">
+		<span>Wood Hammer</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_027.png" alt="Whirlpool">
+		<span>Whirlpool</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_035.png" alt="Smack Down">
+		<span>Smack Down</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0.png" alt="Night Slash">
+		<span>Night Slash</span>
+		<span>20</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_009.png" alt="Midnight Slash">
+		<span>Midnight Slash</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_015.png" alt="Dragon Dance">
+		<span>Dragon Dance</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_007.png" alt="Play Rough">
+		<span>Play Rough</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_032.png" alt="Future Sight">
+		<span>Future Sight</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_023.png" alt="Bulldoze">
+		<span>Bulldoze</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_021.png" alt="Mega Punch">
+		<span>Mega Punch</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_033.png" alt="Moonblast">
+		<span>Moonblast</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_016.png" alt="Spirit Shackle">
+		<span>Spirit Shackle</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_032.png" alt="Growl">
+		<span>Growl</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_023.png" alt="Water Pulse">
+		<span>Water Pulse</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up0_019.png" alt="Blizzard">
+		<span>Blizzard</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_016.png" alt="Shadow Sneak">
+		<span>Shadow Sneak</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_026.png" alt="Future Sight">
+		<span>Future Sight</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1.png" alt="Dive">
+		<span>Dive</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_027.png" alt="Rock Tomb">
+		<span>Rock Tomb</span>
+		<span>19</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_021.png" alt="Iron Head">
+		<span>Iron Head</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2.png" alt="Bulk Up">
+		<span>Bulk Up</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_013.png" alt="Plasma Gale">
+		<span>Plasma Gale</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_003.png" alt="Mammoth Mash">
+		<span>Mammoth Mash</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_002.png" alt="Swift">
+		<span>Swift</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_022.png" alt="Covet">
+		<span>Covet</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_029.png" alt="Slowbeam">
+		<span>Slowbeam</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_014.png" alt="Stomp">
+		<span>Stomp</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1_031.png" alt="Swift">
+		<span>Swift</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_034.png" alt="Razor Leaf">
+		<span>Razor Leaf</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_010.png" alt="Calm Mind">
+		<span>Calm Mind</span>
+		<span>5</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_038.png" alt="Heal Pulse">
+		<span>Heal Pulse</span>
+		<span>6</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up0_018.png" alt="Phantom Force">
+		<span>Phantom Force</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2up1_023.png" alt="Stealth Rock">
+		<span>Stealth Rock</span>
+		<span>1</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_027.png" alt="Acrobatics">
+		<span>Acrobatics</span>
+		<span>2</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_2_026.png" alt="Fire Spin">
+		<span>Fire Spin</span>
+		<span>3</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_025.png" alt="Seismic Slam">
+		<span>Seismic Slam</span>
+		<span>4</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/unite_move_014.png" alt="Rings Unbound">
+		<span>Rings Unbound</span>
+		<span>7</span>
+		</div>
+		
+		<div class="draggable ui-draggable ui-draggable-handle ui-sortable-handle" style="position: relative;">
+		<img src="ben2022_files/move_1up1_029.png" alt="Shadow Claw">
+		<span>Shadow Claw</span>
+		<span>4</span>
+		</div>
+		</div>
+  <script src="ben2022_files/jquery-3.6.0.js"></script>
+  <script src="ben2022_files/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({
+        connectToSortable: ".sortable",
+    });
+    $( ".sortable" ).sortable({
+        revert: true
+    });
+  });
+  window.onbeforeunload = function (e) {
+    e = e || window.event;
+
+    // For IE and Firefox prior to version 4
+    if (e) {
+        e.returnValue = 'Sure?';
+    }
+
+    // For Safari
+    return 'Sure?';
+};
+  </script>
+
+</body></html>
